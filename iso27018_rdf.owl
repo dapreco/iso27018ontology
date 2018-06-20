@@ -1,0 +1,942 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.uni.lu/iso27018.owl"
+     xml:base="http://www.uni.lu/iso27018.owl"
+     xmlns:expression="http://www.estrellaproject.org/lkif-core/expression.owl#"
+     xmlns:role="http://www.estrellaproject.org/lkif-core/role.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pwo="http://purl.org/spar/pwo/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:allot="https://w3id.org/akn/ontology/allot/"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:la="http://www.estrellaproject.org/lkif-core/legal-action.owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:action="http://www.estrellaproject.org/lkif-core/action.owl#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owlapi="http://www.semanticweb.org/owlapi#">
+    <owl:Ontology rdf:about="http://www.uni.lu/iso27018.owl">
+        <owl:versionIRI rdf:resource="http://www.uni.lu/iso27018.owl/1.0.0"/>
+        <owl:imports rdf:resource="https://w3id.org/akn/ontology/allot/2017-04-21"/>
+        <owl:imports rdf:resource="http://purl.org/spar/pwo/2017-06-01"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/expression.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#concernsNotification -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#concernsNotification">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach_Obligation"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach_Notification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#concernsPII -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#concernsPII">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach_on_PII"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#PII"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#concernsRight -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#concernsRight">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Obligation_to_Provide_Right"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#PII_Right"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#consentsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#consentsTo">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Consent"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Contract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#contains">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Contract"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Contract_Content"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#employs -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#employs">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#PII_Processor"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Employee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#establishesInstructions -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#establishesInstructions">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Cloud_Service_Customer"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Instructions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#follows -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#follows">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#PII_Processor"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Instructions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#grants -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#grants">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#PII_Principal"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Consent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#hasObligation -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#hasObligation">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Obligation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#hasRight -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#hasRight">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#PII_Principal"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#PII_Right"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#hasTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Timed_Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#hasUserID -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#hasUserID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#User"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#User_ID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#implementsRight -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#implementsRight">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Right_Implementation"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#PII_Right"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#isCopyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#isCopyOf">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Copy"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#isLocatedIn">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Media"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#isStoredOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#isStoredOn">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#notifyDataBreach -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#notifyDataBreach">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach_Notification"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#operatesOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#operatesOn">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Processing_Operation"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#PII"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#providesMeans -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#providesMeans">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#PII_Processor"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Technical_Means"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#relatesToPIIPrincipal -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#relatesToPIIPrincipal">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#PII"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#PII_Principal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#runsOver -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#runsOver">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Transmission"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Network"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#sends_or_receives -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#sends_or_receives">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Communication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#specifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#specifies">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Instructions"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#specifiesTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#specifiesTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Periods"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#usesMeans -->
+
+    <owl:ObjectProperty rdf:about="http://www.uni.lu/iso27018.owl#usesMeans">
+        <rdfs:domain rdf:resource="http://www.uni.lu/iso27018.owl#Cloud_Service_Customer"/>
+        <rdfs:range rdf:resource="http://www.uni.lu/iso27018.owl#Technical_Means"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Foundation -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Foundation">
+        <owl:disjointWith rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Incorporated"/>
+        <owl:disjointWith rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A kind of (philanthropic) organization, set up as a legal entity either by individuals or institutions, with the purpose of distributing grants to support causes in line with the goals of the foundation</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Incorporated -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Incorporated">
+        <owl:disjointWith rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organisation formed into a legal corporation</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A legal entity is a natural person or a legal construct through which the law allows a group of natural persons to act as if it were a single composite individual for certain purposes. The most common purposes are lawsuits, property ownership, and contracts. Sometimes referred to as corporate personhood or legal personality, this concept allows for easy conduct of business by having ownership, lawsuits, and agreements under the name of the legal entity instead of the several names of the people making up the entity.
+
+A legal entity is not necessarily distinct from the natural persons of which it is composed. Most legal entities are simply amalgamations of the persons that make it up for convenience&apos;s sake. A legal entity that does have a separate existence from its members is called a company or corporation. This distinction gives the corporation its unique perpetual succession privilege and is usually also the source of the limited liability of corporate members. Some other legal entities also enjoy limited liability of members, but not on account of separate existence (Source: Wikipedia.org)</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Private_Legal_Person -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Private_Legal_Person">
+        <owl:disjointWith rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Public_Body"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A legal person as defined in private law</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legal Person (Private Law)</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Public_Body -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Public_Body">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A public body or body created by an act of law to serve a public interest</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Access -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Access">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Processing_Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Access_to_Equipment -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Access_to_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Access_to_PII -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Access_to_PII">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach_on_PII"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Advertising -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Advertising">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Alteration -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Alteration">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach_on_PII"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Authorization -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Authorization">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Cloud_Service_Customer -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Cloud_Service_Customer">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Party"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.uni.lu/iso27018.owl#PII_Controller"/>
+                    <rdf:Description rdf:about="http://www.uni.lu/iso27018.owl#PII_Principal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Communication -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Communication">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Confidentiality_Obligation -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Confidentiality_Obligation">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Obligation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Consent -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Consent"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Contract -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Contract">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Contract_Content -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Contract_Content"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Copy -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Copy">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Timed_Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Country -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Country">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Data -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Data">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/akn/ontology/allot/FRBRWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Data_Breach -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Data_Breach">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/akn/ontology/allot/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Data_Breach_Notification -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Data_Breach_Notification">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Notification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Data_Breach_Obligation -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Data_Breach_Obligation">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Obligation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Data_Breach_on_PII -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Data_Breach_on_PII">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Destruction -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Destruction">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Processing_Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Disclosure -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Disclosure">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Processing_Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Document -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Document">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/akn/ontology/allot/FRBRWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Employee -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Employee">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Encryption -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Encryption">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Processing_Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Erasure -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Erasure">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Processing_Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Hardcopy -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Hardcopy">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Copy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Instructions -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Instructions">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Contract_Content"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Law_Enforcement_Authority -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Law_Enforcement_Authority">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Legally_Binding_Request -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Legally_Binding_Request">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Loss -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Loss">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Data_Breach_on_PII"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Marketing -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Marketing">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Media -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Media"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Network -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Network"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Notification -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Notification">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Obligation -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Obligation"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Obligation_to_Provide_Right -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Obligation_to_Provide_Right">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Obligation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Operating_Procedures -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Operating_Procedures">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Contract_Content"/>
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Policy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#PII -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#PII">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#PII_Controller -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#PII_Controller">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+        <owl:disjointWith rdf:resource="http://www.uni.lu/iso27018.owl#Third_Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#PII_Principal -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#PII_Principal">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#played_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.uni.lu/iso27018.owl#Third_Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#PII_Processor -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#PII_Processor">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+        <owl:disjointWith rdf:resource="http://www.uni.lu/iso27018.owl#Third_Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#PII_Right -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#PII_Right"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Party -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Party">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Periods -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Periods">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Contract_Content"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Place -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Place"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Policy -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Policy">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Timed_Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Premises -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Premises">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Privacy_Stakeholder -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Processing_Execution -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Processing_Execution">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/WorkflowExecution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Processing_Operation -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Processing_Operation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/akn/ontology/allot/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Processing_of_PII -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Processing_of_PII">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Purpose -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Purpose"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Record -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Record">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Restoration_Effort -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Restoration_Effort">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Restriction_Obligation -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Restriction_Obligation">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Obligation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Right_Implementation -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Right_Implementation">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Technical_Means"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Right_to_Access -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Right_to_Access">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#PII_Right"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Right_to_Correct -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Right_to_Correct">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#PII_Right"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Right_to_Erase -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Right_to_Erase">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#PII_Right"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Sub-contractor -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Sub-contractor">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Technical_Means -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Technical_Means"/>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Third_Party -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Third_Party">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Privacy_Stakeholder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Timed_Document -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Timed_Document">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#Transmission -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#Transmission">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Processing_Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#User -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#User">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uni.lu/iso27018.owl#User_ID -->
+
+    <owl:Class rdf:about="http://www.uni.lu/iso27018.owl#User_ID">
+        <rdfs:subClassOf rdf:resource="http://www.uni.lu/iso27018.owl#Timed_Document"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Act_of_Law">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of law: a public act by a legislative body which creates an expression with legal status; the legal status depends on the jurisdiction of the legislative body.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Assignment">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A public act that attributes a power to perform a public act to a public body.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Association">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A voluntary association (also sometimes called an unincorporated association, or just an association) is a group of individuals who voluntarily enter into an agreement to form a body (or organization) to accomplish a purpose.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Co-operative">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An autonomous association of persons united voluntarily to meet their common economic, social, and cultural needs and aspirations through a jointly-owned and democratically-controlled enterprise.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Company">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A company refers to a legal entity formed which has a separate legal identity from its members, and is ordinarily incorporated to undertake commercial business. Although some jurisdictions refer to unincorporated entities as companies, in most jurisdictions the term refers only to incorporated entities. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Corporation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A corporation is a legal entity which, while being composed of natural persons, exists completely separately from them. This separation gives the corporation unique powers which other legal entities lack. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Decision">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Cannot express that the &apos;promised&apos; act corresponds to the act qualified by the statement in writing</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decision: A (written) decision of a public body to perform a public act using a public power assigned by law.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Delegation">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delegate: entrust a task or responsibility to some other person</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Speech_Act">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A legal speech act creates some propositional attitude towards a legal expression.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legislative_Body">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legislature</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legislative Body</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A legislature is a type of (representative) deliberative assembly with the power to adopt laws.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Limited_Company">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A limited company is a corporation whose liability is limited by law</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Mandate">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandate: give (someone) authority to act in a certain way</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Public_Act">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A public act is an act by some Person or Organisation which creates (at least) a communicated attitude (and thereby an expression)</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Public_Limited_Company">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Similar to the US corporation, offers several advantages over trading as sole trader.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLC</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Society">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organized group of people associated together for religious, benevolent, cultural, scientific, political, patriotic, or other purposes.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

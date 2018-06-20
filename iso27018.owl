@@ -1,0 +1,940 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.uni.lu/iso27018.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.uni.lu/iso27018.owl"
+     versionIRI="http://www.uni.lu/iso27018.owl/1.0.0">
+    <Prefix name="" IRI="http://www.uni.lu/iso27018.owl"/>
+    <Prefix name="la" IRI="http://www.estrellaproject.org/lkif-core/legal-action.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="pwo" IRI="http://purl.org/spar/pwo/"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="daml" IRI="http://www.daml.org/2001/03/daml+oil#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="role" IRI="http://www.estrellaproject.org/lkif-core/role.owl#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="allot" IRI="https://w3id.org/akn/ontology/allot/"/>
+    <Prefix name="action" IRI="http://www.estrellaproject.org/lkif-core/action.owl#"/>
+    <Prefix name="expression" IRI="http://www.estrellaproject.org/lkif-core/expression.owl#"/>
+    <Import>https://w3id.org/akn/ontology/allot/2017-04-21</Import>
+    <Import>http://purl.org/spar/pwo/2017-06-01</Import>
+    <Import>http://www.estrellaproject.org/lkif-core/legal-action.owl</Import>
+    <Import>http://www.estrellaproject.org/lkif-core/expression.owl</Import>
+    <Declaration>
+        <Class IRI="#Cloud_Service_Customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#notifyDataBreach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Erasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Breach_on_PII"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#providesMeans"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#follows"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PII_Principal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restoration_Effort"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#implementsRight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Premises"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#concernsPII"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#grants"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alteration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Media"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Operating_Procedures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confidentiality_Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hardcopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Breach_Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Record"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sends_or_receives"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Right_to_Correct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processing_Operation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Right_Implementation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User_ID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Policy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contract"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Copy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processing_Execution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCopyOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Breach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Advertising"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#operatesOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#employs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#concernsNotification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contract_Content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Party"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocatedIn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Loss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Access"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Breach_Notification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#runsOver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Obligation_to_Provide_Right"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesMeans"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Instructions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disclosure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PII_Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Encryption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Right_to_Access"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Law_Enforcement_Authority"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specifiesTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Destruction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Access_to_Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timed_Document"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#concernsRight"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasObligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Employee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marketing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Access_to_PII"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transmission"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consentsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUserID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processing_of_PII"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#establishesInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PII_Right"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Third_Party"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Right_to_Erase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Authorization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PII"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sub-contractor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Document"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specifies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Legally_Binding_Request"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isStoredOn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Purpose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Technical_Means"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Notification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relatesToPIIPrincipal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Consent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restriction_Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PII_Controller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Periods"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Access"/>
+        <Class IRI="#Processing_Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Access_to_Equipment"/>
+        <Class IRI="#Data_Breach"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Access_to_PII"/>
+        <Class IRI="#Data_Breach_on_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Advertising"/>
+        <Class IRI="#Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alteration"/>
+        <Class IRI="#Data_Breach_on_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Authorization"/>
+        <Class IRI="#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud_Service_Customer"/>
+        <Class IRI="#Party"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud_Service_Customer"/>
+        <ObjectUnionOf>
+            <Class IRI="#PII_Controller"/>
+            <Class IRI="#PII_Principal"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Communication"/>
+        <Class IRI="#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confidentiality_Obligation"/>
+        <Class IRI="#Obligation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contract"/>
+        <Class IRI="#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Copy"/>
+        <Class IRI="#Timed_Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data"/>
+        <Class abbreviatedIRI="allot:FRBRWork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Breach"/>
+        <Class abbreviatedIRI="allot:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Breach_Notification"/>
+        <Class IRI="#Notification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Breach_Obligation"/>
+        <Class IRI="#Obligation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Breach_on_PII"/>
+        <Class IRI="#Data_Breach"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Destruction"/>
+        <Class IRI="#Processing_Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disclosure"/>
+        <Class IRI="#Processing_Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Document"/>
+        <Class abbreviatedIRI="allot:FRBRWork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectComplementOf>
+            <Class abbreviatedIRI="la:Legal_Person"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Encryption"/>
+        <Class IRI="#Processing_Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Erasure"/>
+        <Class IRI="#Processing_Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hardcopy"/>
+        <Class IRI="#Copy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instructions"/>
+        <Class IRI="#Contract_Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Law_Enforcement_Authority"/>
+        <Class abbreviatedIRI="role:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legally_Binding_Request"/>
+        <Class IRI="#Communication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Loss"/>
+        <Class IRI="#Data_Breach_on_PII"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marketing"/>
+        <Class IRI="#Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Notification"/>
+        <Class IRI="#Communication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Obligation_to_Provide_Right"/>
+        <Class IRI="#Obligation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Operating_Procedures"/>
+        <Class IRI="#Contract_Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Operating_Procedures"/>
+        <Class IRI="#Policy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PII"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PII_Controller"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PII_Principal"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PII_Principal"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="role:played_by"/>
+            <Class abbreviatedIRI="la:Natural_Person"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PII_Processor"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Party"/>
+        <Class abbreviatedIRI="role:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Periods"/>
+        <Class IRI="#Contract_Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Policy"/>
+        <Class IRI="#Timed_Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Premises"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Privacy_Stakeholder"/>
+        <Class abbreviatedIRI="role:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processing_Execution"/>
+        <Class abbreviatedIRI="pwo:WorkflowExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processing_Operation"/>
+        <Class abbreviatedIRI="pwo:Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processing_Operation"/>
+        <Class abbreviatedIRI="allot:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processing_of_PII"/>
+        <Class abbreviatedIRI="pwo:Workflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Record"/>
+        <Class IRI="#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restoration_Effort"/>
+        <Class abbreviatedIRI="pwo:Workflow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restriction_Obligation"/>
+        <Class IRI="#Obligation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Right_Implementation"/>
+        <Class IRI="#Technical_Means"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Right_to_Access"/>
+        <Class IRI="#PII_Right"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Right_to_Correct"/>
+        <Class IRI="#PII_Right"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Right_to_Erase"/>
+        <Class IRI="#PII_Right"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sub-contractor"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Third_Party"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timed_Document"/>
+        <Class IRI="#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transmission"/>
+        <Class IRI="#Processing_Operation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <Class abbreviatedIRI="action:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User_ID"/>
+        <Class IRI="#Timed_Document"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="la:Foundation"/>
+        <Class abbreviatedIRI="la:Incorporated"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="la:Foundation"/>
+        <Class abbreviatedIRI="la:Unincorporated"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="la:Incorporated"/>
+        <Class abbreviatedIRI="la:Unincorporated"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="la:Private_Legal_Person"/>
+        <Class abbreviatedIRI="la:Public_Body"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PII_Controller"/>
+        <Class IRI="#Third_Party"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PII_Principal"/>
+        <Class IRI="#Third_Party"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PII_Processor"/>
+        <Class IRI="#Third_Party"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTime"/>
+        <ObjectProperty abbreviatedIRI="time:hasTime"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasUserID"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#specifiesTime"/>
+        <ObjectProperty abbreviatedIRI="time:hasTime"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#concernsNotification"/>
+        <Class IRI="#Data_Breach_Obligation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#concernsPII"/>
+        <Class IRI="#Data_Breach_on_PII"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#concernsRight"/>
+        <Class IRI="#Obligation_to_Provide_Right"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consentsTo"/>
+        <Class IRI="#Consent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Contract"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#employs"/>
+        <Class IRI="#PII_Processor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#establishesInstructions"/>
+        <Class IRI="#Cloud_Service_Customer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#follows"/>
+        <Class IRI="#PII_Processor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#grants"/>
+        <Class IRI="#PII_Principal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasObligation"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRight"/>
+        <Class IRI="#PII_Principal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTime"/>
+        <Class IRI="#Timed_Document"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUserID"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#implementsRight"/>
+        <Class IRI="#Right_Implementation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCopyOf"/>
+        <Class IRI="#Copy"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <Class IRI="#Media"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isStoredOn"/>
+        <Class IRI="#Document"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#notifyDataBreach"/>
+        <Class IRI="#Data_Breach_Notification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#operatesOn"/>
+        <Class IRI="#Processing_Operation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#providesMeans"/>
+        <Class IRI="#PII_Processor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#relatesToPIIPrincipal"/>
+        <Class IRI="#PII"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#runsOver"/>
+        <Class IRI="#Transmission"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sends_or_receives"/>
+        <Class IRI="#Privacy_Stakeholder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specifiesTime"/>
+        <Class IRI="#Periods"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usesMeans"/>
+        <Class IRI="#Cloud_Service_Customer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#concernsNotification"/>
+        <Class IRI="#Data_Breach_Notification"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#concernsPII"/>
+        <Class IRI="#PII"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#concernsRight"/>
+        <Class IRI="#PII_Right"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consentsTo"/>
+        <Class IRI="#Contract"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Contract_Content"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#employs"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#establishesInstructions"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#follows"/>
+        <Class IRI="#Instructions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#grants"/>
+        <Class IRI="#Consent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasObligation"/>
+        <Class IRI="#Obligation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRight"/>
+        <Class IRI="#PII_Right"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTime"/>
+        <Class abbreviatedIRI="time:TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUserID"/>
+        <Class IRI="#User_ID"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#implementsRight"/>
+        <Class IRI="#PII_Right"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCopyOf"/>
+        <Class IRI="#Document"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isStoredOn"/>
+        <Class IRI="#Media"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#notifyDataBreach"/>
+        <Class IRI="#Data_Breach"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#operatesOn"/>
+        <Class IRI="#PII"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#providesMeans"/>
+        <Class IRI="#Technical_Means"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#relatesToPIIPrincipal"/>
+        <Class IRI="#PII_Principal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#runsOver"/>
+        <Class IRI="#Network"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sends_or_receives"/>
+        <Class IRI="#Communication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifies"/>
+        <Class IRI="#Purpose"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specifiesTime"/>
+        <Class abbreviatedIRI="time:TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#usesMeans"/>
+        <Class IRI="#Technical_Means"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Act_of_Law</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Act of law: a public act by a legislative body which creates an expression with legal status; the legal status depends on the jurisdiction of the legislative body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Assignment</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A public act that attributes a power to perform a public act to a public body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Association</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A voluntary association (also sometimes called an unincorporated association, or just an association) is a group of individuals who voluntarily enter into an agreement to form a body (or organization) to accomplish a purpose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Co-operative</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An autonomous association of persons united voluntarily to meet their common economic, social, and cultural needs and aspirations through a jointly-owned and democratically-controlled enterprise.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Company</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A company refers to a legal entity formed which has a separate legal identity from its members, and is ordinarily incorporated to undertake commercial business. Although some jurisdictions refer to unincorporated entities as companies, in most jurisdictions the term refers only to incorporated entities. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Corporation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A corporation is a legal entity which, while being composed of natural persons, exists completely separately from them. This separation gives the corporation unique powers which other legal entities lack. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Decision</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Decision: A (written) decision of a public body to perform a public act using a public power assigned by law.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Decision</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NOTE: Cannot express that the &apos;promised&apos; act corresponds to the act qualified by the statement in writing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Delegation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Delegate: entrust a task or responsibility to some other person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Foundation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A kind of (philanthropic) organization, set up as a legal entity either by individuals or institutions, with the purpose of distributing grants to support causes in line with the goals of the foundation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Incorporated</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An organisation formed into a legal corporation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Legal_Person</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A legal entity is a natural person or a legal construct through which the law allows a group of natural persons to act as if it were a single composite individual for certain purposes. The most common purposes are lawsuits, property ownership, and contracts. Sometimes referred to as corporate personhood or legal personality, this concept allows for easy conduct of business by having ownership, lawsuits, and agreements under the name of the legal entity instead of the several names of the people making up the entity.
+
+A legal entity is not necessarily distinct from the natural persons of which it is composed. Most legal entities are simply amalgamations of the persons that make it up for convenience&apos;s sake. A legal entity that does have a separate existence from its members is called a company or corporation. This distinction gives the corporation its unique perpetual succession privilege and is usually also the source of the limited liability of corporate members. Some other legal entities also enjoy limited liability of members, but not on account of separate existence (Source: Wikipedia.org)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Legal_Speech_Act</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A legal speech act creates some propositional attitude towards a legal expression.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Legislative_Body</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A legislature is a type of (representative) deliberative assembly with the power to adopt laws.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>la:Legislative_Body</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Legislative Body</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>la:Legislative_Body</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Legislature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Limited_Company</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A limited company is a corporation whose liability is limited by law</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Mandate</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mandate: give (someone) authority to act in a certain way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Private_Legal_Person</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A legal person as defined in private law</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>la:Private_Legal_Person</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Legal Person (Private Law)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Public_Act</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A public act is an act by some Person or Organisation which creates (at least) a communicated attitude (and thereby an expression)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Public_Body</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A public body or body created by an act of law to serve a public interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Public_Limited_Company</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Similar to the US corporation, offers several advantages over trading as sole trader.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>la:Public_Limited_Company</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">PLC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>la:Society</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An organized group of people associated together for religious, benevolent, cultural, scientific, political, patriotic, or other purposes.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
